@@ -1,10 +1,10 @@
 ---
 category: 'docker'
-description: 'Docker repository for tool_name'  # Description of why the repository exists
-maintainers: ['YourName@mednet.ucla.edu']  # email address of maintainers
+description: 'Docker repository for PLINK and PLINK2'  # Description of why the repository exists
+maintainers: ['nwiltsie@mednet.ucla.edu']  # email address of maintainers
 languages: ['Dockerfile']  # programming languages used
-tools: ['tool_name']  # Name of the tool(s) used in the Dockerfile
-version: ['X.X.X']  # Tool version number
+tools: ['plink', 'plink2']  # Name of the tool(s) used in the Dockerfile
+version: ['20230116']  # Tool version number
 purpose: ''  # Description of what this tool does
-references: ''  # is the tool/dependencies published, is there a confluence page
-image_name: ''  # name of the new docker image
+references: 'https://www.cog-genomics.org/plink/'  # is the tool/dependencies published, is there a confluence page
+image_name: 'plink'  # name of the new docker image
