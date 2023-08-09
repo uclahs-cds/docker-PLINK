@@ -11,12 +11,6 @@ RUN mamba install -qy unzip && \
         -qO /tmp/plink.zip && \
     unzip /tmp/plink.zip -d /usr/local/bin/
 
-ARG PLINK2_VERSION=alpha4/plink2_linux_x86_64_20230621
-RUN wget \
-        https://s3.amazonaws.com/plink2-assets/${PLINK2_VERSION}.zip \
-        -qO /tmp/plink2.zip && \
-    unzip /tmp/plink2.zip -d /usr/local/bin/
-
 # Deploy the target tools into a base image
 FROM ubuntu:${UBUNTU_VERSION} AS final
 COPY --from=builder /usr/local /usr/local

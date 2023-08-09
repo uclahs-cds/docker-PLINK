@@ -1,10 +1,8 @@
 # docker-tool_name
-Dockerfile for PLINK 1.9 and PLINK 2.0, open-source whole-genome association analysis toolsets.
+Dockerfile for PLINK 1.9, an open-source whole-genome association analysis toolset.
 
 # Documentation
 PLINK 1.9 usage instructions can be found at https://www.cog-genomics.org/plink/1.9/.
-
-PLINK 2.0 usage instructions can be found at https://www.cog-genomics.org/plink/2.0/.
 
 # Version
 ### Background
@@ -21,8 +19,8 @@ PLINK has extremely confusing versioning.
   not feature-compatible with PLINK 1.9 and includes an application named
   `plink2`.
 
-In broad strokes, PLINK 1.9 is a replacement for PLINK 1.07. PLINK 2.0 is a new
-application.
+In broad strokes, PLINK 2.0 is used for most new development, but PLINK 1.9 is
+required for specific use cases. PLINK 1.07 is deprecated and unused.
 
 However, the community generally differentiates between "PLINK 1" (1.07)
 and "PLINK 2" / "second-generation PLINK" (1.9 and 2.0) based on the project
@@ -31,8 +29,8 @@ management transition from Shaun Purcell to Chris Chang. For example, the
 list](https://groups.google.com/g/plink2-users) has a stated purpose of
 "discussion of interest to regular PLINK 1.9 and 2.0 users." 
 
-PLINK 1.9 and 2.0 release files are differentiated by datestamp (e.g.
-`plink_<arch>_20230116.zip` and `plink2_<arch>_20230804.zip`). The [PLINK
+PLINK 1.9 release files are differentiated by datestamp (e.g.
+`plink_<arch>_20230116.zip`). The [PLINK
 website](https://www.cog-genomics.org/plink/) includes descriptive release
 links, such as "Stable (beta 7, 16 Jan)", but the linked filenames do not
 include these tags. The binaries each include a version string that combines
@@ -41,9 +39,6 @@ the descriptive name and build date:
 ```console
 $ plink --version
 PLINK v1.90b7 64-bit (16 Jan 2023)
-
-$ plink2 --version
-PLINK v2.00a4.4LM 64-bit Intel (21 Jun 2023)
 ```
 
 There is no way to determine the baked-in version string from the filename:
@@ -59,8 +54,8 @@ There is no way to determine the baked-in version string from the filename:
 
 For the purposes of this image:
 
-* `plink` will refer to PLINK 1.9
-* `plink2` will refer to PLINK 2.0
+* PLINK and `plink` will refer to PLINK 1.9
+* PLINK 2 and `plink2` will refer to PLINK 2.0 (not included in this image)
 * The datestamps will be used as the canonical versions for tagging this image
   * Only release files with datestamps should be used; `plink_linux_x86_64.zip`
     and `plink_linux_x86_64_latest.zip` are unacceptable
@@ -70,7 +65,6 @@ For the purposes of this image:
 | Tool | Version | Descriptive Tag | Built-In Version String |
 |------|---------|-----------------|-------------------------|
 |PLINK 1.9 | 20230116 | Stable (beta 7, 16 Jan) | v1.90b7 64-bit (16 Jan 2023) |
-|PLINK 2 | 20230621 | Alpha 4.4 final (21 Jun) | v2.00a4.4LM 64-bit Intel (21 Jun 2023) |
 
 ---
 
