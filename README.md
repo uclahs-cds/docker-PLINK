@@ -50,21 +50,25 @@ There is no way to determine the baked-in version string from the filename:
 |`plink_linux_x86_64_20230116.zip`|PLINK v1.90b7 64-bit (16 Jan 2023)|b7|
 |`plink_linux_x86_64_latest.zip`|PLINK v1.90b7 64-bit (16 Jan 2023)|b7|
 
+Additionally, neither the filename nor the version string reference the git
+commit hash from which the code was built. The developers do not create release
+tags for PLINK 1.9, so if we want to associate the version string with a commit
+ID we must do so manually.
+
 ### Takeaway
 
 For the purposes of this image:
 
 * PLINK and `plink` will refer to PLINK 1.9
 * PLINK 2 and `plink2` will refer to PLINK 2.0 (not included in this image)
-* The datestamps will be used as the canonical versions for tagging this image
-  * Only release files with datestamps should be used; `plink_linux_x86_64.zip`
-    and `plink_linux_x86_64_latest.zip` are unacceptable
-* The descriptive tags and built-in version strings will be listed separately
-  for in the table below for clarity
+* The docker tag version will be a combination of the compiled version string
+  and the associated commit hash, e.g. `v1.90b7-a84a0cd`.
+* The commit hash, release date, descriptive tags, and built-in version strings
+  will be listed separately for in the table below for clarity
 
-| Tool | Version | Descriptive Tag | Built-In Version String |
-|------|---------|-----------------|-------------------------|
-|PLINK 1.9 | 20230116 | Stable (beta 7, 16 Jan) | v1.90b7 64-bit (16 Jan 2023) |
+| Tool | Hash | Date | Descriptive Tag | Built-In Version String |
+|------|------|------|-----------------|-------------------------|
+| PLINK 1.9 | [a84a0cd](https://github.com/chrchang/plink-ng/commit/a84a0cd4b0e53cd9542e86487c11e0b58555a87f) | 20230116 | Stable (beta 7, 16 Jan) | v1.90b7 64-bit (16 Jan 2023) |
 
 ---
 
@@ -80,7 +84,7 @@ Author: Nicholas Wiltsie
 
 docker-PLINK is licensed under the GNU General Public License version 2. See the file LICENSE for the terms of the GNU GPL license.
 
-docker-PLINK enables dockerized access to the PLINK and PLINK2 toolsets.
+docker-PLINK enables dockerized access to the PLINK toolset.
 
 Copyright (C) 2023 University of California Los Angeles ("Boutros Lab") All rights reserved.
 
