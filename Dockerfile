@@ -30,5 +30,7 @@ RUN groupadd -g 500001 bldocker && \
 # Change the default user to bldocker from root
 USER bldocker
 
+ENTRYPOINT ["plink"]
+
 LABEL   maintainer="Nicholas Wiltsie <nwiltsie@mednet.ucla.edu>" \
         org.opencontainers.image.source=https://github.com/uclahs-cds/docker-PLINK
