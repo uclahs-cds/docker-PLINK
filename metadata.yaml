@@ -1,10 +1,10 @@
 ---
 category: 'docker'
-description: 'Docker repository for PLINK 1.9'  # Description of why the repository exists
-maintainers: ['nwiltsie@mednet.ucla.edu']  # email address of maintainers
-languages: ['Dockerfile']  # programming languages used
-tools: ['plink']  # Name of the tool(s) used in the Dockerfile
-version: ['v1.90b7-a84a0cd']  # Tool version number
-purpose: ''  # Description of what this tool does
-references: 'https://www.cog-genomics.org/plink/'  # is the tool/dependencies published, is there a confluence page
-image_name: 'plink'  # name of the new docker image
+description: 'Docker repository for PLINK 1.9'
+maintainers: ['nwiltsie@mednet.ucla.edu']
+languages: ['Dockerfile']
+tools: ['plink']
+version: ['v1.90b7-a84a0cd']
+purpose: ''
+references: 'https://www.cog-genomics.org/plink/'
+image_name: 'plink'
