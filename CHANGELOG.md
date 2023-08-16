@@ -8,37 +8,10 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ---
 
 ## [Unreleased]
-### Changed
-- Update builder image to mambaforge
-- Switch to GitHub Packages registry in `CICD-base.yaml`
-- Update `metadata.yaml` and `PULL_REQUEST_TEMPLATE.md` and replace Docker Hub with GitHub Packages in the template
-- Changed something but it is not part of the last release.
-
-## Added
-- Add `Docker-build-release.yaml`
-- Add `image_name` to `metadata.yaml`
 
 ---
 
-## [1.0.0] - YYYY-MM-DD
+## [v1.90b7-a84a0cd] - 2023-08-16
+
 ### Added
-- For new features.
-- Added item 1.
-
-### Changed
-- For changes in existing functionality.
-- Changed item 1.
-
-### Deprecated
-- For soon-to-be removed features.
-
-### Removed
-- For now removed features.
-- Removed item 1.
-
-### Fixed
-- For any bug fixes.
-- Fixed item 1.
-
-### Security
-- In case of vulnerabilities.
+- Initial release of Docker image, with PLINK v1.90b7-a84a0cd
