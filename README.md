@@ -1,4 +1,4 @@
-# docker-tool_name
+# docker-PLINK
 Dockerfile for PLINK 1.9, an open-source whole-genome association analysis toolset.
 
 # Documentation
