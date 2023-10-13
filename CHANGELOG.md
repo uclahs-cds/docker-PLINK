@@ -15,3 +15,6 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Added
 - Initial release of Docker image, with PLINK v1.90b7-a84a0cd
+
+### Changed
+- Change entrypoint from `plink` to `/bin/bash` for NextFlow
