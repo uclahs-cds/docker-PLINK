@@ -5,7 +5,6 @@ FROM condaforge/mambaforge:${MINIFORGE_VERSION} AS builder
 
 # Use mamba to install tools and dependencies into /usr/local
 ARG PLINK_VERSION=plink_linux_x86_64_20250615
-ARG PLINK_VERSION=plink_linux_x86_64_20230116
 ARG PLINK_HASH="52571583a4b1a648ed598322e0df0e71ce5d817a23c3c37b2291bd21b408a955 plink.zip"
 WORKDIR /tmp
 
