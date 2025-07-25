@@ -69,6 +69,7 @@ For the purposes of this image:
 | Tool | Hash | Date | Descriptive Tag | Built-In Version String |
 |------|------|------|-----------------|-------------------------|
 | PLINK 1.9 | [a84a0cd](https://github.com/chrchang/plink-ng/commit/a84a0cd4b0e53cd9542e86487c11e0b58555a87f) | 20230116 | Stable (beta 7, 16 Jan) | v1.90b7 64-bit (16 Jan 2023) |
+| PLINK 1.9 | [dd27a67](https://github.com/chrchang/plink-ng/commit/dd27a67bd6412e98a6c2039e34c9885024961e08) | 20250615 | Stable (beta 7.8, 15 Jun) | v1.9.0-b.7.8 64-bit (15 Jun 2025) |
 
 ---
 
