@@ -27,6 +27,10 @@ COPY --from=builder /usr/local /usr/local
 
 # Add a new user/group called bldocker
 RUN groupadd -g 500001 bldocker && \
+    # Add a system user 'bldocker' with restricted logging (-l flag) to prevent
+    # entries in lastlog and faillog databases. This is intentional to reduce
+    # unnecessary logging in a containerized environment where interactive logins
+    # are not expected.
     useradd -r -l -u 500001 -g bldocker bldocker
 
 # Change the default user to bldocker from root
